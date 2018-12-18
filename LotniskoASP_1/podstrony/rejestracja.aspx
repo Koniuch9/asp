@@ -64,7 +64,7 @@
                     <asp:TextBox ID="imie" runat="server"></asp:TextBox>
                     <br/>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
-                        ErrorMessage="To pole jest wymagane." ControlToValidate="imie" 
+                        ErrorMessage="To pole jest wymagane. " ControlToValidate="imie" 
                         ForeColor="#CC0000" Display="Dynamic"></asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
                         ControlToValidate="imie" ErrorMessage=" Tylko litery i spacje" 
@@ -72,10 +72,10 @@
                     <br/>
 					Nazwisko<br/><asp:TextBox ID="nazw" runat="server"></asp:TextBox><br />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
-                        ErrorMessage="To pole jest wymagane." ControlToValidate="nazw" 
+                        ErrorMessage="To pole jest wymagane. " ControlToValidate="nazw" 
                         ForeColor="#CC0000" Display="Dynamic"></asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" 
-                        ControlToValidate="nazw" ErrorMessage=" Nazwiska dwuczłonowe oddzielone myślnikiem" 
+                        ControlToValidate="nazw" ErrorMessage=" Tylko litery i myślnik w środku" 
                         ForeColor="#CC0000" ValidationExpression="[a-zA-Z]+(-[a-zA-Z]+)?" Display="Dynamic"></asp:RegularExpressionValidator>
                     <br/>			
 					Login:<br/><asp:TextBox ID="log" runat="server"></asp:TextBox>
@@ -93,7 +93,7 @@
                         TextMode="Password"></asp:TextBox>
                     <br/>
                      <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" 
-                        ErrorMessage="To pole jest wymagane." ControlToValidate="pass_repeat" 
+                        ErrorMessage="To pole jest wymagane. " ControlToValidate="pass_repeat" 
                         ForeColor="#CC0000" Display="Dynamic"></asp:RequiredFieldValidator>
 
 					<asp:CompareValidator ID="CompareValidator1" runat="server" 
@@ -107,7 +107,14 @@
                     <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" 
                         ControlToValidate="email" ErrorMessage=" Nieprawidłowy format email" 
                         ForeColor="#CC0000" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" Display="Dynamic"></asp:RegularExpressionValidator>
-                    <br/>			
+                    <br/>	
+                    Doświadczenie(w latach):<br />
+                    <asp:TextBox ID="lata" 
+                        runat="server" TextMode="Number"></asp:TextBox><br />
+                    <asp:RangeValidator ID="RangeValidator1" runat="server" 
+                        ErrorMessage="Na pewno tyle nie masz. " ControlToValidate="lata" Type="Integer" 
+                        ForeColor="#CC0000" Display="Dynamic" MaximumValue="100" MinimumValue="0"></asp:RangeValidator>
+                    		
 				
 				
 			</div>
@@ -119,6 +126,11 @@
 			<div id="register_form_down">			
 			<input type="submit" value="Dalej" />
 			<input type="reset" />
+            
+			    <asp:Button ID="Button1" runat="server" Text="Wyświetl" 
+                    onclick="Button1_Click" CausesValidation="False" 
+                    UseSubmitBehavior="False" />
+            
 			</div>
 			</form>
 		</div>	

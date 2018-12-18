@@ -16,7 +16,27 @@ namespace LotniskoASP_1.podstrony
             if (lbl != null) lbl.Visible = false;
             if (IsPostBack) 
             {
-                lbl.Text = "Imię: " + imie.Text + "<br />" + "Nazwisko: " + nazw.Text + "<br />" + "Login: " + log.Text + "<br />" + "Hasło: #zakodowane"  + "<br />" + "Email: " + email.Text;               
+                lbl.Text = (imie.Text != "" ? "Imię: " + imie.Text + "<br />" : "")
+                + (nazw.Text != "" ? "Nazwisko: " + nazw.Text + "<br />" : "")
+                + (log.Text != "" ? "Login: " + log.Text + "<br />" : "")
+                + (pass.Text != "" ? "Hasło: #zakodowane" + "<br />" : "")
+                + (email.Text != "" ? "Email: " + email.Text + "<br />" : "")
+                + (lata.Text != ""? "Doświadczenie: " + lata.Text:"");               
+                lbl.Visible = true;
+            }
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Label lbl = (Label)register_form.FindControl("Label1");
+            if (lbl != null)
+            {
+                lbl.Text = (imie.Text != "" ? "Imię: " + imie.Text + "<br />" : "")
+                + (nazw.Text != "" ? "Nazwisko: " + nazw.Text + "<br />" : "")
+                + (log.Text != "" ? "Login: " + log.Text + "<br />" : "")
+                + (pass.Text != "" ? "Hasło: #zakodowane" + "<br />" : "")
+                + (email.Text != "" ? "Email: " + email.Text + "<br />" : "")
+                + (lata.Text != "" ? "Doświadczenie: " + lata.Text : "");               
                 lbl.Visible = true;
             }
         }
