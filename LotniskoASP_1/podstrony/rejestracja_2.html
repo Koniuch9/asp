@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OKSL - Rejestracja</title>
+		<meta charset="UTF-8">
+		<meta name = "description" content = "Main Page">
+		<meta name = "keywords" content = "lotnisko, latanie">
+		<link rel="stylesheet" type="text/css" href="../moje_style.css">
+	</head>
+	<body>
+			
+	<div id="page">	
+		<div id="banner_container">
+			<div id="banner">
+				
+				<a href="../strona_glowna.html"><img id="logo" alt="Logo OKSL" src="../grafika/logoOKSL.jpe"/></a>
+				
+				
+					<h1 id="title">Obornicki Klub Sportów Lotniczych</h1>
+					<p id="titlep">Golędzinów</p>
+				
+			</div>
+		</div>	
+	<div id="container">			
+		<div id="menu">
+		<div id="menu_items">
+		<nav>
+			<ul>
+				<li><a href="dla_pilota.html">Dla pilota</a></li>
+				<li><a href="forum.html">Forum</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="#mail_us">Kontakt</a></li>
+				<li><a href="#">Kalendarz imprez</a></li>
+				<li><a href="#">Historia</a></li>
+				<li><a href="szkolenia.html">Szkolenia pilotów</a></li>
+				<li><a href="#">Piknik lotniczy</a>
+					<ul>
+						<li><a href="#">O imprezie</a>
+							<ul>
+								<li><a href="#">Zaproszenie</a></li>
+								<li><a href="#">Program</a></li>							
+							</ul>
+						</li>
+						<li><a href="#">Partnerzy i Sponsorzy</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		</div>
+		</div>			
+		
+		<div id="content_register">
+		<h2>Rejestracja, opcje konta</h2>
+		<form id="register_form">
+
+			Kolor avatara:<br/><input type="color" id="kolor" value="#ffac02"/></br></br><button type="button" id="losuj_kolor">Losuj kolor</button><br/><br/>
+			Data urodzin:<br/><input type="date"/><br/><br/>
+
+			Doświadczenie:(lata za sterami)<br/><input type="range" min="0" max="11" step="1" value="5" /><br/><br/>
+		<!--	<datalist id="lata">
+				<option value="0" label="0">
+				<option value="1">
+				<option value="3">
+				<option value="4" >
+				<option value="5" label="5">
+				<option value="6">
+				<option value="7">
+				<option value="8">
+				<option value="9">
+				<option value="10" label="10">
+				
+			</datalist>
+			-->
+			Twoja strona:<br/><input type="url"/>
+			<div id="register_form_down">
+			<h4>Akceptuję <a href="#">regulamin</a><input type="checkbox"/></h4>
+			
+			<input type="submit" onclick="return conf('Na pewno zakończyć rejestrację?')"/>
+			<input type="reset" onclick="return conf('Na pewno zresetować formularz?')"/>
+			</div>
+		</form>	
+			
+		</div>	
+		
+		
+	</div>			
+	</div>	
+<script src="../skrypty/zmiana_styli.js"></script>
+<script src="../skrypty/formularze.js"></script>	
+	</body>
+	
+</html>

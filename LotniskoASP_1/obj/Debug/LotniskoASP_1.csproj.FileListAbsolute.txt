@@ -1,0 +1,4 @@
+c:\users\administrator\documents\visual studio 2010\Projects\LotniskoASP_1\LotniskoASP_1\bin\LotniskoASP_1.dll
+c:\users\administrator\documents\visual studio 2010\Projects\LotniskoASP_1\LotniskoASP_1\bin\LotniskoASP_1.pdb
+c:\users\administrator\documents\visual studio 2010\Projects\LotniskoASP_1\LotniskoASP_1\obj\Debug\LotniskoASP_1.dll
+c:\users\administrator\documents\visual studio 2010\Projects\LotniskoASP_1\LotniskoASP_1\obj\Debug\LotniskoASP_1.pdb

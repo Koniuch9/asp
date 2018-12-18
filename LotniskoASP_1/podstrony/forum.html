@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lotnisko</title>
+		<meta content="text/html; charset=UTF-8" />
+		<meta name = "description" content = "Main Page">
+		<meta name = "keywords" content = "lotnisko, latanie">
+		<link rel="stylesheet" type="text/css" href="../moje_style.css">
+	</head>
+	<body>
+	<img id="samolotik" src="../grafika/samolotik.gif" width="100px" height="56px"/>		
+	<div id="page">	
+		<div id="banner_container">
+			<div id="banner">
+				
+				<a href="../strona_glowna.html"><img id="logo" alt="Logo OKSL" src="../grafika/logo2.png"/></a>
+				
+				
+					<h1 id="title">Obornicki Klub Sportów Lotniczych</h1>
+					<p id="titlep">Golędzinów</p>
+				
+			</div>
+		</div>	
+	<div id="container">			
+		<div id="menu">
+		<div id="menu_items">
+		
+			<ul>
+				<li><a href="dla_pilota.html">Dla pilota</a></li>
+				<li><a href="forum.html">Forum</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="#mail_us">Kontakt</a></li>
+				<li><a href="#">Kalendarz imprez</a></li>
+				<li><a href="#">Historia</a></li>
+				<li><a href="szkolenia.html">Szkolenia pilotów</a></li>
+				<li><a href="#">Piknik lotniczy</a>
+					<ul>
+						<li><a href="#">O imprezie</a>
+							<ul>
+								<li><a href="#">Zaproszenie</a></li>
+								<li><a href="#">Program</a></li>							
+							</ul>
+						</li>
+						<li><a href="#">Partnerzy i Sponsorzy</a></li>
+					</ul>
+				</li>
+			</ul>
+		
+		</div>
+		</div>			
+		
+		<div id="content">	
+			<div>
+				<h2>Forum OKSL</h2>
+				<div id="forum_content">
+					<div class="post">
+						<button onclick="edit(this)" class="edytuj">Edytuj</button>
+						<button onclick="del(this)" class="usun">Usuń</button>
+						<p>Super stronka. Na pewno tu wrócę! :D</p>
+					</div>
+					<div class="post">
+						<button onclick="edit(this)" class="edytuj">Edytuj</button>
+						<button onclick="del(this)" class="usun">Usuń</button>
+						<p>A mi tam w ogóle się nie podoba, kolory jakieś dziwne, nie ma to nic fajnego. Do widzenia !</p>
+					</div>
+					
+					
+					
+				</div>
+				<div id="nowy_post">
+						<textarea id="pole_tekstowe">
+						</textarea>
+						<button onclick="dodaj_post()">Dodaj</button>
+				</div>
+			</div>
+		</div>	
+		
+		<div id="right_menu">
+			<div id="join_us">
+			<p id="powitanie"></p>
+				<form id="login">
+					Login:<input class="login_form" id="nick" type="text"/><br/><br/>
+					Hasło:<input class="login_form" id="haslo" type="text"/><br/><br/>
+					<button id="logbutton" onclick="return f()">Zaloguj</button>
+				</form>
+				<div id="register">
+					<a href="#" id="zapomnial">Zapomniałeś hasła?</a><br/>
+					<a href="rejestracja.aspx">Zarejestruj się</a>
+				</div>
+			</div>
+			<div id="mail">
+				<a name="mail_us" href="mailto:koniu95@interia.pl">Wyślij nam maila!</a>
+			</div>
+		</div>
+	</div>			
+	</div>	
+	</body>
+	
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>OKSL - Rejestracja</title>
+		<meta content="text/html; charset=UTF-8" />
+		<meta name = "description" content = "Main Page">
+		<meta name = "keywords" content = "lotnisko, latanie">
+		<link rel="stylesheet" type="text/css" href="../moje_style.css">
+		
+	</head>
+	<body>
+			
+	<div id="page">	
+		<div id="banner_container">
+			<div id="banner">
+				
+				<a href="../strona_glowna.html"><img id="logo" alt="Logo OKSL" src="../grafika/logoOKSL.jpe"/></a>
+				
+				
+					<h1 id="title">Obornicki Klub Sportów Lotniczych</h1>
+					<p id="titlep">Golędzinów</p>
+				
+			</div>
+		</div>	
+	<div id="container">			
+		<div id="menu">
+		<div id="menu_items">
+		<nav>
+			<ul>
+				<li><a href="dla_pilota.html">Dla pilota</a></li>
+				<li><a href="forum.html">Forum</a></li>
+				<li><a href="galeria.html">Galeria</a></li>
+				<li><a href="#mail_us">Kontakt</a></li>
+				<li><a href="#">Kalendarz imprez</a></li>
+				<li><a href="#">Historia</a></li>
+				<li><a href="szkolenia.html">Szkolenia pilotów</a></li>
+				<li><a href="#">Piknik lotniczy</a>
+					<ul>
+						<li><a href="#">O imprezie</a>
+							<ul>
+								<li><a href="#">Zaproszenie</a></li>
+								<li><a href="#">Program</a></li>							
+							</ul>
+						</li>
+						<li><a href="#">Partnerzy i Sponsorzy</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		</div>
+		</div>				
+		
+		<div id="content_register">
+		<h2>Rejestracja</h2>
+		<form id="register_form" action="rejestracja_2.html">
+			<div id="register_form_left">
+				
+				
+					Imię: <br/><input type="text" autocomplete="on" autofocus/ onfocus="pokaz_pomoc('iP')" onblur="schowaj_pomoc('iP')"><p id="iP" style="display:none">Wpisz swoje imię</p><br/><br/>
+					Nazwisko<br/><input type="text" autocomplete="on" required onfocus="pokaz_pomoc('nP')" onblur="schowaj_pomoc('nP')"/><p id="nP" style="display:none">Wpisz swoje nazwisko</p>	<br/><br/>				
+					Login:<br/><input autocomplete="on" type="text" onfocus="pokaz_pomoc('lP')" onblur="schowaj_pomoc('lP')"/><p id="lP" >Wpisz login</p><br/><br/>										
+					Hasło:<br/><input autocomplete="on" type="text" onfocus="pokaz_pomoc('hP')" onblur="schowaj_pomoc('hP')"/><p id="hP" style="display:none">Wpisz hasło</p><br/><br/>
+					Powtóz hasło:<br/><input autocomplete="on" type="text" onfocus="pokaz_pomoc('phP')" onblur="schowaj_pomoc('phP')"/><p id="phP" style="display:none">Powtórz hasło</p><br/><br/>
+					Email:<br/><input type="email" autocomplete="on" required onfocus="pokaz_pomoc('eP')" onblur="schowaj_pomoc('eP')"/><p id="eP" style="display:none">Wpisz email</p><br/>
+				
+				
+			</div>
+			<div id="register_form_right">
+				
+					Na czym latasz?<br/>
+					<input list="samoloty"/>
+						<datalist id="samoloty">
+						<option value="Jeszcze nie latam">
+						<option value="Uczę się latać">
+						<option value="Tecnam">
+						<option value="Star">
+						<option value="Sinus">
+						<option value="Cesna">
+						<option value="Antonov">
+						<option value="Savannah">
+						<option value="STOL">
+						<option value="VTOL">
+						<option value="Storch">
+						<option value="Sonex">
+						</datalist><br/><br/>
+					Płeć:<br/>
+					<input type="radio" name="plec" checked/>Mężczyzna
+					<input type="radio" name="plec"/>Kobieta<br/><br/>
+					Miesiąc urodzin: <br/>
+					<input list="miesiace">
+					<datalist id="miesiace">
+					<option value="Styczeń">
+					<option value="Luty">
+					<option value="Marzec">
+					<option value="Kwiecień">
+					<option value="Maj">
+					<option value="Czerwiec">
+					<option value="Lipiec">
+					<option value="Sierpień">
+					<option value="Wrzesień">
+					<option value="Październik">
+					<option value="Listopad">
+					<option value="Grudzień">
+					</datalist><br/><br/>
+					Napisz coś o sobie:<br/>
+					<textarea maxlength="200"></textarea><br/><br/>
+					Telefon:<br/>
+					<input type="tel" autocomplete="on" pattern="[0-9]{9}" />
+				
+			</div>
+			<div id="register_form_down">
+			
+			
+			<input type="submit" value="Dalej" onclick="return conf('Na pewno przejść dalej?')"/>
+			<input type="reset" onclick="return conf('Na pewno zresetować formularz?')"/>
+			</div>
+			</form>	
+			
+			
+		</div>	
+		
+		
+		
+	</div>			
+	</div>	
+	<button id="kliknij">Kliknij tutaj...</button>
+	<button id="atutaj">A kliknij tutaj...</button>
+	<p id="siema"></p>
+	
+
+</script>
+<script src="../skrypty/zmiana_styli.js"></script>
+<script src="../skrypty/formularze.js"></script>
+	</body>
+		
+</html>
