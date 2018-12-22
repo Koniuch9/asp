@@ -59,7 +59,7 @@
         <div id="content">
         <form id="form1" runat="server">
             
-            <asp:RadioButtonList ID="RadioButtonList1" runat="server" BackColor="#0000CC" 
+            <asp:RadioButtonList ID="RadioButtonList1" runat="server" BackColor="#0099FF" 
                 RepeatDirection="Horizontal" Width="841px" AutoPostBack="True">
                 <asp:ListItem Selected="True" Value="speedometer">Prędkościomierz</asp:ListItem>
                 <asp:ListItem Value="variometer">Wariometr</asp:ListItem>
@@ -68,8 +68,10 @@
                 <asp:ListItem Value="altitude">Wysokościomierz</asp:ListItem>
                 <asp:ListItem Value="rpm">Obrotościomierz</asp:ListItem>
             </asp:RadioButtonList>
-            <asp:CheckBoxList ID="products" runat="server" CssClass="checkbox_table" OnSelectedIndexChanged="Click">
+            
+            <asp:CheckBoxList ID="products" runat="server" CssClass="checkbox_table" OnSelectedIndexChanged="Click">            
             </asp:CheckBoxList>
+            
             <asp:Label ID="Label1" runat="server" Text="Ilość"></asp:Label>
             <asp:TextBox ID="TextBox1" runat="server" TextMode="Number">1</asp:TextBox>
             <asp:Button ID="Button1" runat="server" Text="Dodaj do koszyka" 

@@ -58,8 +58,21 @@
 
         <div id="content">
         <form id="form1" runat="server">
+            <div id="cart_content" runat="server">
             
+                
             
+            </div>
+            <asp:CheckBoxList ID="order_content" runat="server" CssClass="checkbox_table" 
+                 AutoPostBack="True">            
+            </asp:CheckBoxList>
+            <asp:Label ID="Label1" runat="server" Text="Ilość: "></asp:Label>
+            <asp:TextBox ID="TextBox1" runat="server" TextMode="Number"></asp:TextBox>
+            <asp:RangeValidator
+                ID="RangeValidator1" runat="server" ErrorMessage="Pomiędzy 1 a 100" ControlToValidate="TextBox1"></asp:RangeValidator>
+            <br />  
+            <asp:Button ID="Button1" runat="server" Text="Zapisz"  />          
+        
         </form>
         </div>
    
