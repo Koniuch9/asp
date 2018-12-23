@@ -85,6 +85,7 @@
     <Content Include="podstrony\rejestracja_2.html" />
     <Content Include="podstrony\szkolenia.html" />
     <Content Include="sklep\koszyk.aspx" />
+    <Content Include="sklep\potwierdzenie.aspx" />
     <Content Include="sklep\produkty.aspx" />
     <Content Include="strona_glowna.html" />
     <Content Include="moje_style.css" />
@@ -111,6 +112,13 @@
     </Compile>
     <Compile Include="sklep\koszyk.aspx.designer.cs">
       <DependentUpon>koszyk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sklep\potwierdzenie.aspx.cs">
+      <DependentUpon>potwierdzenie.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sklep\potwierdzenie.aspx.designer.cs">
+      <DependentUpon>potwierdzenie.aspx</DependentUpon>
     </Compile>
     <Compile Include="sklep\produkty.aspx.cs">
       <DependentUpon>produkty.aspx</DependentUpon>

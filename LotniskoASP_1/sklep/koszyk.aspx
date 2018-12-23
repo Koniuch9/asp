@@ -33,6 +33,7 @@
 			<ul>
 				<li><a href="../podstrony/dla_pilota.html">Dla pilota</a></li>
 				<li><a href="../podstrony/forum.html">Forum</a></li>
+                <li><a href="produkty.aspx">Sklep</a></li>
 				<li><a href="../podstrony/galeria.html">Galeria</a></li>
 				<li><a href="#mail_us">Kontakt</a></li>
 				<li><a href="#">Kalendarz imprez</a></li>
@@ -64,15 +65,35 @@
             
             </div>
             <asp:CheckBoxList ID="order_content" runat="server" CssClass="checkbox_table" 
-                 AutoPostBack="True">            
+                 AutoPostBack="True" CausesValidation="True" ValidationGroup="valid">            
             </asp:CheckBoxList>
             <asp:Label ID="Label1" runat="server" Text="Ilość: "></asp:Label>
-            <asp:TextBox ID="TextBox1" runat="server" TextMode="Number"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" TextMode="Number" 
+                ValidationGroup="valid"></asp:TextBox>
             <asp:RangeValidator
-                ID="RangeValidator1" runat="server" ErrorMessage="Pomiędzy 1 a 100" ControlToValidate="TextBox1"></asp:RangeValidator>
-            <br />  
-            <asp:Button ID="Button1" runat="server" Text="Zapisz"  />          
+                ID="RangeValidator1" runat="server" ErrorMessage="Pomiędzy 0 a 100" 
+                ControlToValidate="TextBox1" MaximumValue="100" MinimumValue="0" 
+                Type="Integer" ValidationGroup="valid"></asp:RangeValidator><br />
+                <asp:Button ID="Button2" runat="server" Text="Wyczyść" 
+                onclick="Button2_Click" /><br />  
+            <asp:Label ID="Label2" runat="server" Text="Wybierz sposób zapłaty"></asp:Label>
+            <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                <asp:ListItem Selected="True">Przelew</asp:ListItem>
+                <asp:ListItem>Karta</asp:ListItem>
+            </asp:RadioButtonList>
+            <asp:Label ID="Label3" runat="server" Text="Wybierz formę dostawy"></asp:Label>
+            <asp:RadioButtonList ID="RadioButtonList2" runat="server" AutoPostBack="True">
+                <asp:ListItem Selected="True" Value="Kurier">Kurier - 7,99zł</asp:ListItem>
+                <asp:ListItem Value="Paczkomat">Paczkomat - 5zł</asp:ListItem>
+                <asp:ListItem Value="Poczta">Poczta - 9,99zł</asp:ListItem>
+            </asp:RadioButtonList>
+            <asp:Label ID="Label4" runat="server" Text="Cena całkowita: "></asp:Label>
+            <asp:Label ID="koszt" runat="server" Text="Label"></asp:Label>
+            <br />            
         
+            
+
+            <asp:Button ID="Button1" runat="server" Text="Dalej" onclick="Button1_Click"  />  
         </form>
         </div>
    
