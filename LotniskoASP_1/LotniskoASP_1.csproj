@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -50,6 +51,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="grafika\border.png" />
     <Content Include="grafika\border1.png" />
     <Content Include="grafika\border2.jpe" />
@@ -77,6 +82,8 @@
     <Content Include="grafika\wro1.jpg" />
     <Content Include="grafika\XII_piknik.jpg" />
     <Content Include="grafika\zlot.jpg" />
+    <Content Include="Login.aspx" />
+    <Content Include="podstrony\baza.aspx" />
     <Content Include="podstrony\dla_pilota.html" />
     <Content Include="podstrony\forum.html" />
     <Content Include="podstrony\galeria.html" />
@@ -96,8 +103,16 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="zabezpieczony\zarzadzaj_baza.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Lotnisko.Master.cs">
       <DependentUpon>Lotnisko.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,12 +120,24 @@
     <Compile Include="Lotnisko.Master.designer.cs">
       <DependentUpon>Lotnisko.Master</DependentUpon>
     </Compile>
+    <Compile Include="podstrony\baza.aspx.cs">
+      <DependentUpon>baza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="podstrony\baza.aspx.designer.cs">
+      <DependentUpon>baza.aspx</DependentUpon>
+    </Compile>
     <Compile Include="podstrony\rejestracja.aspx.cs">
       <DependentUpon>rejestracja.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="podstrony\rejestracja.aspx.designer.cs">
       <DependentUpon>rejestracja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Produkty.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Produkty.dbml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sklep\koszyk.aspx.cs">
@@ -134,14 +161,32 @@
     <Compile Include="sklep\produkty.aspx.designer.cs">
       <DependentUpon>produkty.aspx</DependentUpon>
     </Compile>
+    <Compile Include="zabezpieczony\zarzadzaj_baza.aspx.cs">
+      <DependentUpon>zarzadzaj_baza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="zabezpieczony\zarzadzaj_baza.aspx.designer.cs">
+      <DependentUpon>zarzadzaj_baza.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lotnisko.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="zabezpieczony\Web.config">
+    <Content Include="zabezpieczony\zabezpieczonyWeb.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Produkty.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Produkty.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
-    </Content>
+    </None>
+    <None Include="Produkty.dbml.layout">
+      <DependentUpon>Produkty.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

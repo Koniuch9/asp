@@ -1,6 +1,23 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="potwierdzenie.aspx.cs" Inherits="LotniskoASP_1.sklep.potwierdzenie" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Lotnisko.Master" CodeBehind="potwierdzenie.aspx.cs" Inherits="LotniskoASP_1.sklep.potwierdzenie" %>
+<asp:Content ContentPlaceHolderID="CartLabel" runat="server" ID="cart_label">
+    <a href="/sklep/koszyk.aspx"><img src="/grafika/cart.png" alt="" width="50px" height="50px" id="cart"/></a>
+<asp:Label ID="produkt_qty" runat="server" Text="" CssClass="cart_label"></asp:Label>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="PageContent" runat="server" ID="ConfirmContent">
+    <form id="form1" runat="server">
+                <div id="confirm_content" runat="server">
+                    
+                    
+                    
+                </div>
+                <asp:Button ID="Button1" runat="server" Text="Powrót do sklepu" 
+                        onclick="Button1_Click" />
+                <asp:Button ID="Button2" runat="server" Text="Opłać zamówienie" 
+                    onclick="Button2_Click" />
+            </form>
+</asp:Content>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -97,4 +114,4 @@
     </div>
     </div>
 </body>
-</html>
+</html>--%>
